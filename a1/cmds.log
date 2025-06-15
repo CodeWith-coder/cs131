@@ -1,0 +1,45 @@
+    1  mkdir a1
+    2  cd a1
+    3  ls
+    4  sudo apt install python3-pip
+    5  sudo pip install gdown
+    6  gdown 18oi_OAsRnl8YAOxtQ5smcJsL7IHl-2x0
+
+Q1. What is your home directory path?  How did you find out (commands used)?
+    7  echo "Answer to Q1: To use the command -> echo $HOME " > a1.txt
+    8  echo "My home directory path is: " >> a1.txt
+    9  echo $HOME >> a1.txt
+   10  echo "   " >> a1.txt
+
+Q2. Using only "ls" (and maybe "grep"), can you find out which file under directory /proc/ contains information about memory (mem) on your server? Which file contains information about the CPU's on your server?
+   11  echo "Answer to the part 1 of Q2: To use the command -> ls /proc | grep mem" >> a1.txt
+   12  echo "The information about the server's memory is: " >> a1.txt
+   13  ls /proc | grep mem >> a1.txt
+   14  echo "   " >> a1.txt
+
+   16  echo "Answer to the part 2 of Q2: To use the command -> ls /proc | grep cpu" >> a1.txt
+   17  echo "The information about the CPUs on the server is: " >> a1.txt
+   18  ls /proc | grep cpu >> a1.txt
+   19  echo "   " >> a1.txt
+
+Q3. Identify the operating system version. Which file under /etc/ contains this information?
+   20  echo "Answer to Q3: To use the command -> ls /etc | grep release " >> a1.txt
+   21  echo "The file under under /etc/ is: " >> a1.txt
+   22  ls /etc | grep release >> a1.txt
+   23  echo "      "  >> a1.txt
+
+Q4. Using the taxi dataset (2019-04.csv):
+A.Sort the pickup location IDs in order to find the most popular pickup locations on April 2nd, 2019. Identify the top 3 locations.
+   25  echo "Answer to Q4 part A: To use the command -> grep '^.*,"2019-04-02' 2019-04.csv | cut -d',' -f8 | sort | uniq -c | sort -nr | head -n 3" >> a1.txt
+   26  echo "Counts - Pickup location IDs: (Top 1 to Top 3) on 2019-04-02: " >> a1.txt
+   27  grep '^.*,"2019-04-02' 2019-04.csv | cut -d',' -f8 | sort | uniq -c | sort -nr | head -n 3 >> a1.txt
+   28  echo "      "  >> a1.txt
+
+B. Sort the pickup location IDs in order to find the most popular pickup locations on April 10th, 2019. Identify the top 3 locations.
+   30  echo "Answer to Q4 part B: To use the command -> grep '^.*,"2019-04-10' 2019-04.csv | cut -d',' -f8 | sort | uniq -c | sort -nr | head -n 3" >> a1.txt
+   31  echo "Counts - Pickup location IDs: (Top 1 to Top 3)  on 2019-04-10: " >> a1.txt
+   32  grep '^.*,"2019-04-10' 2019-04.csv | cut -d',' -f8 | sort | uniq -c | sort -nr | head -n 3 >> a1.txt
+ 
+   33  cat a1.txt
+   34  vim a1.txt
+   36  history > cmds.log

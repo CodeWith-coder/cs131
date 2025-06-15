@@ -1,0 +1,49 @@
+
+Q1. What is your home directory path?  How did you find out (commands used)?
+
+Answer to Q1: To use the command -> echo $HOME 
+My home directory path is: 
+/home/chia_lin_hsiao
+
+------------------------------------------------------------------------
+
+Q2. Using only "ls" (and maybe "grep"), can you find out which file under directory /proc/ contains information about memory (mem) on your server? Which file contains information about the CPU's on your server?
+
+Answer to the part 1 of Q2: To use the command -> ls /proc | grep mem
+The information about the server's memory is: 
+iomem
+meminfo
+   
+Answer to the part 2 of Q2: To use the command -> ls /proc | grep cpu
+The information about the CPUs on the server is: 
+cpuinfo
+
+-----------------------------------------------------------------------
+
+Q3. Identify the operating system version. Which file under /etc/ contains this information?
+   
+Answer to Q3: To use the command -> ls /etc | grep release 
+The file under under /etc/ is: 
+lsb-release
+os-release
+
+----------------------------------------------------------------------
+
+Q4. Using the taxi dataset (2019-04.csv):
+A. Sort the pickup location IDs in order to find the most popular pickup locations on April 2nd, 2019. Identify the top 3 locations.
+
+Answer to Q4 part A: To use the command -> grep '^.*,"2019-04-02' 2019-04.csv | cut -d',' -f8 | sort | uniq -c | sort -nr | head -n 3
+Counts - Pickup location IDs: (Top 1 to Top 3) on 2019-04-02: 
+  13354 161.0
+  12421 237.0
+  11138 236.0
+
+
+B. Sort the pickup location IDs in order to find the most popular pickup locations on April 10th, 2019. Identify the top 3 locations.
+      
+Answer to Q4 part B: To use the command -> grep '^.*,"2019-04-10' 2019-04.csv | cut -d',' -f8 | sort | uniq -c | sort -nr | head -n 3
+Counts - Pickup location IDs: (Top 1 to Top 3)  on 2019-04-10: 
+  13290 161.0
+  12956 237.0
+  11278 236.0
+
