@@ -55,9 +55,9 @@ else
     cat "$url" > csv.zip
 fi
 ```
-If url does start with “http”, it downloads process using the command tool `url`.
+If url does start with “http”, it downloads process using the command tool `curl`.
 
-And it saves the content at the provided URL into a file named ‘csv.zip’ (curl -s "$url" > csv.zip). 
+And it saves the content at the provided URL into a file named ‘csv.zip’ `(curl -s "$url" > csv.zip)`. 
 
 The `-s` tells curl to silence the progress. Otherwise, it copies its contents directly into a new file `csv.zip`.
 
