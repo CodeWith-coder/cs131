@@ -1,0 +1,9 @@
+    1  vim grades.csv
+    2  cat grades.csv
+    3  vim grader.awk
+    4  cat grader.awk
+    5  chmod 755 grader.awk
+    6  awk -f grader.awk grades.csv
+    7  awk -f grader.awk grades.csv > a3.txt
+    8  cat a3.txt
+    9  history > cmnd.log
